@@ -6,7 +6,7 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  menuOptions = [
+  topMenuOptions = [
     {
       image: 'bugs.png',
       option: 'Bugs',
@@ -31,6 +31,19 @@ export class AppComponent {
       image: 'paintings.png',
       option: 'Paintings',
       state: 'paintings'
+    }
+  ];
+
+  bottomMenuOptions = [
+    {
+      image: 'account.png',
+      option: 'Account',
+      state: 'account'
+    },
+    {
+      image: 'help.png',
+      option: 'Help',
+      state: 'help'
     }
   ];
 }

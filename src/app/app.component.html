@@ -3,10 +3,18 @@
 </header>
 <div>
   <nav>
-    <a *ngFor="let menuOption of menuOptions" uiSref="{{menuOption.state}}" uiSrefActive="active">
-      <img src="/assets/{{menuOption.image}}"/>
-      <h2>{{menuOption.option}}</h2>
-    </a>
+    <div>
+      <a *ngFor="let menuOption of topMenuOptions" uiSref="{{menuOption.state}}" uiSrefActive="active">
+        <img src="/assets/{{menuOption.image}}"/>
+        <h2>{{menuOption.option}}</h2>
+      </a>
+    </div>
+    <div>
+      <a *ngFor="let menuOption of bottomMenuOptions" uiSref="{{menuOption.state}}" uiSrefActive="active">
+        <img src="/assets/{{menuOption.image}}"/>
+        <h2>{{menuOption.option}}</h2>
+      </a>
+    </div>
   </nav>
   <ui-view></ui-view>
 </div>

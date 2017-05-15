@@ -1,14 +1,37 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 header {
   background-color: #68CC1B;
 }
 
 div {
+  flex-grow: 1;
   display: flex;
   flex-direction: row;
 
   nav {
     background-color: #EAFCDC;
     padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    div {
+      display: flex;
+      flex-direction: column;
+
+      &:first-child {
+        flex-grow: 1;
+      }
+
+      &:last-child {
+        flex-grow: 0;
+      }
+    }
 
     a {
       display: flex;
@@ -23,17 +46,17 @@ div {
       &.active {
         background: #C4C2FF;
       }
+    }
 
-      img {
-        width: 30px;
-        height: 30px;
-        margin-right: 10px;
-      }
+    img {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
 
-      h2 {
-        vertical-align: middle;
-        margin: 0;
-      }
+    h2 {
+      vertical-align: middle;
+      margin: 0;
     }
   }
 }
