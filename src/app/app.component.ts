@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,31 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app works!';
+  menuOptions = [
+    {
+      image: 'bugs.png',
+      option: 'Bugs',
+      state: 'bugs'
+    },
+    {
+      image: 'fish.png',
+      option: 'Fish',
+      state: 'fish'
+    },
+    {
+      image: 'fossils.png',
+      option: 'Fossils',
+      state: 'fossils'
+    },
+    {
+      image: 'music.png',
+      option: 'Music',
+      state: 'music'
+    },
+    {
+      image: 'paintings.png',
+      option: 'Paintings',
+      state: 'paintings'
+    }
+  ];
 }
