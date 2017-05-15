@@ -1,3 +1,24 @@
-<p>
-  bugs works!
-</p>
+<table>
+  <thead>
+  <tr>
+    <th></th>
+    <th>#</th>
+    <th>Name</th>
+    <th>Sale Price (in bells)</th>
+    <th>Location</th>
+    <th>On Island</th>
+    <th>Notes</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let bug of bugs">
+    <td><input type="checkbox"/></td>
+    <td>{{bug.id}}</td>
+    <td>{{bug.name}}</td>
+    <td>{{bug.price}}</td>
+    <td>{{bug.location}}</td>
+    <td>{{bug.onIsland}}</td>
+    <td>{{bug.notes}}</td>
+  </tr>
+  </tbody>
+</table>
