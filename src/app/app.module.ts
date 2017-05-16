@@ -9,6 +9,11 @@ import {BugsComponent} from './bugs/bugs.component';
 import {FishComponent} from './fish/fish.component';
 import {YesNoPipe} from './pipes/yesNo.pipe';
 import {BugsService} from './services/bugs.service';
+import { FossilsComponent } from './fossils/fossils.component';
+import { MusicComponent } from './music/music.component';
+import { PaintingsComponent } from './paintings/paintings.component';
+import { AccountComponent } from './account/account.component';
+import { HelpComponent } from './help/help.component';
 
 const bugsState = {name: 'bugs', url: '/bugs', component: BugsComponent};
 const fishState = {name: 'fish', url: '/fish', component: FishComponent};
@@ -24,7 +29,12 @@ const fishState = {name: 'fish', url: '/fish', component: FishComponent};
     AppComponent,
     BugsComponent,
     FishComponent,
-    YesNoPipe
+    YesNoPipe,
+    FossilsComponent,
+    MusicComponent,
+    PaintingsComponent,
+    AccountComponent,
+    HelpComponent
   ],
   providers: [
     BugsService
