@@ -1,43 +1,23 @@
 import {Component, OnInit} from '@angular/core';
+import {BugsService} from '../services/bugs.service';
+import {Bug} from '../models/bug';
 
 @Component({
   selector: 'app-bugs',
   templateUrl: './bugs.component.html',
-  styleUrls: ['./bugs.component.scss']
+  styleUrls: ['./bugs.component.scss'],
+  providers: [BugsService]
 })
 export class BugsComponent implements OnInit {
 
-  bugs = [
-    {
-      id: 1,
-      name: 'Common Butterfly',
-      price: 80,
-      location: 'Near Flowers',
-      onIsland: true,
-      notes: ''
-    },
-    {
-      id: 2,
-      name: 'Snail',
-      price: 250,
-      location: 'On Flowers',
-      onIsland: false,
-      notes: 'Only available when raining'
-    },
-    {
-      id: 3,
-      name: 'Hermit Crab',
-      price: 1000,
-      location: 'Beach',
-      onIsland: true,
-      notes: 'Exclusive to Island'
-    }
-  ];
+  bugsNotInCollection: Bug[];
+  bugsInCollection: Bug[];
 
-  constructor() {
+  constructor(private bugsService: BugsService) {
   }
 
   ngOnInit() {
+    this.bugsNotInCollection = this.bugsService.getAllInCollection();
+    this.bugsInCollection = this.bugsService.getAllInCollection();
   }
-
 }

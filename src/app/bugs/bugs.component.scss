@@ -1,0 +1,28 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+
+    &:first-child {
+      margin-bottom: 20px;
+    }
+
+    span {
+      margin-left: 5vw;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+table {
+  margin-left: 10vw;
+}
+
+th, td {
+  white-space: nowrap;
+  text-align: left;
+}

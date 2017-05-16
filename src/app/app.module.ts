@@ -7,6 +7,8 @@ import {AppComponent} from './app.component';
 import {UIRouterModule} from '@uirouter/angular';
 import {BugsComponent} from './bugs/bugs.component';
 import {FishComponent} from './fish/fish.component';
+import {YesNoPipe} from './pipes/yesNo.pipe';
+import {BugsService} from './services/bugs.service';
 
 const bugsState = {name: 'bugs', url: '/bugs', component: BugsComponent};
 const fishState = {name: 'fish', url: '/fish', component: FishComponent};
@@ -21,9 +23,12 @@ const fishState = {name: 'fish', url: '/fish', component: FishComponent};
   declarations: [
     AppComponent,
     BugsComponent,
-    FishComponent
+    FishComponent,
+    YesNoPipe
   ],
-  providers: [],
+  providers: [
+    BugsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

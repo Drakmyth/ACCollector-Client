@@ -8,19 +8,19 @@ header {
   background-color: #68CC1B;
 }
 
-div {
+:host > div {
   flex-grow: 1;
   display: flex;
   flex-direction: row;
 
-  nav {
+  > nav {
     background-color: #EAFCDC;
     padding-top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    div {
+    > div {
       display: flex;
       flex-direction: column;
 
@@ -61,3 +61,6 @@ div {
   }
 }
 
+ui-view {
+  flex-grow: 1;
+}

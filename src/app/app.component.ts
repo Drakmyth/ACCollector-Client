@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {MenuOption} from './models/menuOption';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +7,7 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  topMenuOptions = [
+  topMenuOptions: MenuOption[] = [
     {
       image: 'bugs.png',
       option: 'Bugs',
