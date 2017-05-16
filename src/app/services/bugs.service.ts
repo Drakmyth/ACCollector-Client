@@ -4,10 +4,7 @@ import {Bug} from '../models/bug';
 @Injectable()
 export class BugsService {
 
-  constructor() {
-  }
-
-  getAllInCollection(): Bug[] {
+  static getAllInCollection(): Bug[] {
     return [
       {
         id: 1,

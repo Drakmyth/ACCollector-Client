@@ -17,7 +17,7 @@ export class BugsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.bugsNotInCollection = this.bugsService.getAllInCollection();
-    this.bugsInCollection = this.bugsService.getAllInCollection();
+    this.bugsNotInCollection = BugsService.getAllInCollection();
+    this.bugsInCollection = BugsService.getAllInCollection();
   }
 }

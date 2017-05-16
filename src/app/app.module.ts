@@ -14,6 +14,9 @@ import {MusicComponent} from './music/music.component';
 import {PaintingsComponent} from './paintings/paintings.component';
 import {AccountComponent} from './account/account.component';
 import {HelpComponent} from './help/help.component';
+import {HeaderComponent} from './header/header.component';
+import {CharacterService} from './services/character.service';
+import {GroupByPipe} from './pipes/groupBy.pipe';
 
 const bugsState = {name: 'bugs', url: '/bugs', component: BugsComponent};
 const fishState = {name: 'fish', url: '/fish', component: FishComponent};
@@ -48,10 +51,13 @@ const helpState = {name: 'help', url: '/help', component: HelpComponent};
     MusicComponent,
     PaintingsComponent,
     AccountComponent,
-    HelpComponent
+    HelpComponent,
+    HeaderComponent,
+    GroupByPipe
   ],
   providers: [
-    BugsService
+    BugsService,
+    CharacterService
   ],
   bootstrap: [AppComponent]
 })

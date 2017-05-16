@@ -1,0 +1,11 @@
+<header>
+  <a uiSref="bugs"><img src="/assets/logo.png"/></a>
+</header>
+<label for="characterSelect">
+  <span *ngIf="selectedCharacter">{{selectedCharacter.game}} Character:</span>
+  <select [(ngModel)]="selectedCharacter" id="characterSelect">
+    <optgroup *ngFor="let group of (characters | groupBy:'game')" label="{{group.name}}">
+      <option [ngValue]="character" *ngFor="let character of group.children">{{character.name}}</option>
+    </optgroup>
+  </select>
+</label>
