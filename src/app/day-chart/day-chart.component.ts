@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-day-chart',
+  selector: 'acc-day-chart',
   templateUrl: './day-chart.component.html',
   styleUrls: ['./day-chart.component.scss']
 })

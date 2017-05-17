@@ -3,7 +3,7 @@ import {BugsService} from '../services/bugs.service';
 import {Bug} from '../models/bug';
 
 @Component({
-  selector: 'app-bugs',
+  selector: 'acc-bugs',
   templateUrl: './bugs.component.html',
   styleUrls: ['./bugs.component.scss'],
   providers: [BugsService]

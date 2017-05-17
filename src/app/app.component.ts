@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {MenuOption} from './models/menuOption';
 
 @Component({
-  selector: 'app-root',
+  selector: 'acc-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

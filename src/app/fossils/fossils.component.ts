@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-fossils',
+  selector: 'acc-fossils',
   templateUrl: './fossils.component.html',
   styleUrls: ['./fossils.component.scss']
 })

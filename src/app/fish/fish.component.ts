@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-fish',
+  selector: 'acc-fish',
   templateUrl: './fish.component.html',
   styleUrls: ['./fish.component.scss']
 })

@@ -1,10 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {CharacterService} from '../services/character.service';
 import {Character} from '../models/character';
-import {Games} from '../models/games';
 
 @Component({
-  selector: 'app-header',
+  selector: 'acc-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   providers: [CharacterService]
