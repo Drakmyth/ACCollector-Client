@@ -7,7 +7,7 @@ import {AppComponent} from './app.component';
 import {UIRouterModule} from '@uirouter/angular';
 import {BugsComponent} from './bugs/bugs.component';
 import {FishComponent} from './fish/fish.component';
-import {YesNoPipe} from './pipes/yesNo.pipe';
+import {YesNoPipe} from './pipes/yesno.pipe';
 import {BugsService} from './services/bugs.service';
 import {FossilsComponent} from './fossils/fossils.component';
 import {MusicComponent} from './music/music.component';
@@ -16,7 +16,8 @@ import {AccountComponent} from './account/account.component';
 import {HelpComponent} from './help/help.component';
 import {HeaderComponent} from './header/header.component';
 import {CharacterService} from './services/character.service';
-import {GroupByPipe} from './pipes/groupBy.pipe';
+import {GroupByPipe} from './pipes/group-by.pipe';
+import {DayChartComponent} from './day-chart/day-chart.component';
 
 const bugsState = {name: 'bugs', url: '/bugs', component: BugsComponent};
 const fishState = {name: 'fish', url: '/fish', component: FishComponent};
@@ -53,7 +54,8 @@ const helpState = {name: 'help', url: '/help', component: HelpComponent};
     AccountComponent,
     HelpComponent,
     HeaderComponent,
-    GroupByPipe
+    GroupByPipe,
+    DayChartComponent
   ],
   providers: [
     BugsService,
