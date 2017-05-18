@@ -1,40 +1,49 @@
-<svg attr.height="{{15 + (bugsToday.length + 1) * 20}}" width="1035" xmlns:svg="http://www.w3.org/2000/svg">
-  <svg:g *ngFor="let bug of bugsToday; let i = index">
-    <svg:text x="125" attr.y="{{15 + i * 20}}" style="text-anchor:end;">{{bug.name}}</svg:text>
-    <svg:line x1="130"
-              attr.y1="{{10 + i * 20}}"
-              x2="1000"
-              attr.y2="{{10 + i * 20}}"
-              stroke-width="1.5"
-              stroke="lightgray"/>
-    <svg:g *ngFor="let time of bug.availability[0].times">
-      <svg:rect attr.x="{{(130 + time.from.hours() * ((1000 - 130) / 24))}}"
-                attr.y="{{1 + i * 20}}"
-                attr.width="{{((time.to.hours() + 1) - time.from.hours()) * ((1000 - 130) / 24)}}"
-                height="18"
-                fill="red"
+<svg attr.height="{{totalHeight}}" width="1035" xmlns:svg="http://www.w3.org/2000/svg">
+  <svg:g *ngFor="let bug of bugs; let i = index">
+    <svg:text class="rowName"
+              attr.x="{{rowLineStartX - 5}}"
+              attr.y="{{getRowNameY(i)}}">{{bug.name}}
+    </svg:text>
+    <svg:line attr.x1="{{rowLineStartX}}"
+              attr.y1="{{getRowLineY(i)}}"
+              attr.x2="{{rowLineEndX}}"
+              attr.y2="{{getRowLineY(i)}}"/>
+    <svg:g *ngFor="let rect of getTimeRects(i)">
+      <svg:rect attr.x="{{rect.x}}"
+                attr.y="{{rect.y}}"
+                attr.width="{{rect.width}}"
+                attr.height="{{rect.height}}"
                 rx="8"
                 ry="8"/>
     </svg:g>
-    <svg:text x="1005" attr.y="{{13 + i * 20}}" style="font-size:10pt;">Hide</svg:text>
-  </svg:g>
-  <svg:g *ngFor="let tickIndex of 25 | counter">
-    <svg:line attr.x1="{{130 + tickIndex * ((1000 - 130) / 24)}}"
-              attr.y1="{{5 + bugsToday.length * 20}}"
-              attr.x2="{{130 + tickIndex * ((1000 - 130) / 24)}}"
-              attr.y2="{{15 + bugsToday.length * 20}}"
-              stroke-width="1.5"
-              stroke="lightgray"/>
-    <svg:text attr.x="{{130 + tickIndex * ((1000 - 130) / 24)}}"
-              attr.y="{{30 + bugsToday.length * 20}}"
-              style="font-size: 10pt; text-anchor:middle;"
-              fill="gray">{{timeLabels[tickIndex]}}
+    <svg:text class="hideText"
+              attr.x="{{rowLineEndX + 5}}"
+              attr.y="{{getRowNameY(i) - 2}}">Hide
     </svg:text>
   </svg:g>
-  <svg:line x1="130"
-            attr.y1="{{15 + bugsToday.length * 20}}"
-            x2="1000"
-            attr.y2="{{15 + bugsToday.length * 20}}"
-            stroke-width="1.5"
-            stroke="lightgray"/>
+  <svg:g *ngFor="let tickIndex of tickMarkCount | counter">
+    <svg:line attr.x1="{{getTickX(tickIndex)}}"
+              attr.y1="{{height - 10}}"
+              attr.x2="{{getTickX(tickIndex)}}"
+              attr.y2="{{height}}"/>
+    <svg:text class="timeLabel"
+              attr.x="{{getTickX(tickIndex)}}"
+              attr.y="{{height + timeLabelOffset}}">{{timeLabels[tickIndex]}}
+    </svg:text>
+  </svg:g>
+  <svg:line attr.x1="{{rowLineStartX}}"
+            attr.y1="{{height}}"
+            attr.x2="{{rowLineEndX}}"
+            attr.y2="{{height}}"/>
+  <svg:g>
+    <svg:text class="currentTimeText"
+              attr.x="{{currentTimeX}}"
+              attr.y="{{yOffset - 15}}">{{currentTimeText}}
+    </svg:text>
+    <svg:line class="currentTimeLine"
+              attr.x1="{{currentTimeX}}"
+              attr.y1="{{yOffset - 10}}"
+              attr.x2="{{currentTimeX}}"
+              attr.y2="{{height}}"/>
+  </svg:g>
 </svg>

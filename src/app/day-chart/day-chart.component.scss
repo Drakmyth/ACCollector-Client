@@ -1,0 +1,33 @@
+rect {
+  fill: red;
+}
+
+line {
+  stroke-width: 1.5;
+  stroke: lightgray;
+}
+
+.rowName {
+  text-anchor: end;
+}
+
+.hideText {
+  font-size: 0.8em;
+}
+
+.timeLabel {
+  font-size: 0.8em;
+  text-anchor: middle;
+  fill: gray;
+}
+
+.currentTimeLine {
+  stroke-width: 3;
+  stroke: dodgerblue;
+}
+
+.currentTimeText {
+  text-anchor: middle;
+  fill: dodgerblue;
+  font-size: 0.8em;
+}
