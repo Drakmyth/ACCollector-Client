@@ -1,3 +1,4 @@
+import {Availability} from './availability';
 export class Bug {
 
   constructor(public id: number,
@@ -6,6 +7,7 @@ export class Bug {
               public location: string,
               public onIsland: boolean,
               public notes: string,
+              public availability: Availability[],
               public added: Date) {
 
   }

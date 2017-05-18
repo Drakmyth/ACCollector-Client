@@ -18,6 +18,7 @@ import {HeaderComponent} from './header/header.component';
 import {CharacterService} from './services/character.service';
 import {GroupByPipe} from './pipes/group-by.pipe';
 import {DayChartComponent} from './day-chart/day-chart.component';
+import {CounterPipe} from './pipes/counter.pipe';
 
 const bugsState = {name: 'bugs', url: '/bugs', component: BugsComponent};
 const fishState = {name: 'fish', url: '/fish', component: FishComponent};
@@ -55,7 +56,8 @@ const helpState = {name: 'help', url: '/help', component: HelpComponent};
     HelpComponent,
     HeaderComponent,
     GroupByPipe,
-    DayChartComponent
+    DayChartComponent,
+    CounterPipe
   ],
   providers: [
     BugsService,

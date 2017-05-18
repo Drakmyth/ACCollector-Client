@@ -12,7 +12,7 @@
     "strictNullChecks": true,
     "alwaysStrict": true,
     "forceConsistentCasingInFileNames": true,
-    "allowSyntheticDefaultImports": false,
+    "allowSyntheticDefaultImports": true,
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "noFallthroughCasesInSwitch": true,
