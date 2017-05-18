@@ -99,6 +99,7 @@ export class DayChartComponent implements OnInit, OnDestroy {
 
     const bug = this.bugs[index];
 
+    // TODO: Get availability that includes current day and hide row if one doesn't exist
     const availability = bug.availability[0];
 
     const rects = [];
